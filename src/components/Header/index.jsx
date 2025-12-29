@@ -4,7 +4,7 @@ function Header() {
   return (
     <div>
       <h1>Header</h1>
-      <img src={Logo} alt="logo-dev-movies" />
+      <img src={Logo} alt="logo-dev-movies" height={'50px'} />
     </div>
   )
 }
