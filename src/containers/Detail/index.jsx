@@ -8,7 +8,7 @@ import {
   getMovieVideos
 } from '../../services/getData'
 import { getImages } from '../../utils/getImages'
-import { Container, Background, Cover } from './styles'
+import { Container, Background, Cover, Info } from './styles'
 
 function Detail() {
   const { id } = useParams()
@@ -46,7 +46,12 @@ function Detail() {
             <Cover>
               <img src={getImages(movie.poster_path)} />
             </Cover>
-            <div>Detalhe</div>
+            <Info>
+              <h2>{movie.title}</h2>
+              <div>Gêneros</div>
+              <p>{movie.overview}</p>
+              <div>Créditos</div>
+            </Info>
           </Container>
         </>
       )}
